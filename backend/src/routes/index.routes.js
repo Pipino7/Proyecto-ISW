@@ -5,6 +5,8 @@ import { Router } from "express";
 /** Enrutador de usuarios  */
 import userRoutes from "./user.routes.js";
 
+import instalacionController from "../controllers/instalacionController.js";
+
 /** Enrutador de autenticación */
 import authRoutes from "./auth.routes.js";
 
@@ -21,3 +23,4 @@ router.use("/auth", authRoutes);
 
 // Exporta el enrutador
 export default router;
+router.post("/instalaciones", instalacionController.crearInstalacion);
